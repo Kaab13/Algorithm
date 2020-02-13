@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+void printPermutation(vector<int>resultVector)
+{
+    for(auto x:resultVector)
+        {
+            cout << x << " ";
+        }
+        cout <<endl;
+}
+
+int main()
+{
+    int numberOfElement,x;
+    vector<int> permutation;
+
+    cin >> numberOfElement;
+    while(numberOfElement!=0)
+    {
+        cin >> x;
+        permutation.push_back(x);
+        numberOfElement--;
+
+    }
+    do {
+        printPermutation(permutation);
+    }
+     while (next_permutation(permutation.begin(),permutation.end()));
+}
