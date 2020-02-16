@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+#include<iostream>
+#include <utility>
+
+using namespace std;
+int main()
+{
+    int node,edge,u,v,weight;
+    cin >> node >> edge;
+    vector<vector<pair<int,int>>>graph(node);
+    for(int i=0;i<edge;i++)
+    {
+        cin >> u >> v >> weight;
+        if(u==v)
+        {
+            graph[u].push_back(make_pair(weight,v));
+        }
+        else
+        {
+            graph[u].push_back(make_pair(weight,v));
+            graph[v].push_back(make_pair(weight,u));
+        }
+    }
+    cout << graph[2].at(1).second;
+}
